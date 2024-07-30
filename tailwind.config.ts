@@ -62,7 +62,6 @@ const config: Config = {
       config: containerQueries.config ?? {},
     },
   ],
-
 };
 
 export default config;

@@ -22,6 +22,6 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
 
   eslint: { dirs: ["src"], ignoreDuringBuilds: true },
-}
+};
 
 export default nextConfig;

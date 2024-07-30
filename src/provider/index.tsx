@@ -1,3 +1,4 @@
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "./theme-provider";
 
 interface ProviderStackProps {
@@ -12,7 +13,7 @@ export function ProviderStack({ children }: ProviderStackProps) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <TooltipProvider>{children}</TooltipProvider>
     </ThemeProvider>
   );
 }

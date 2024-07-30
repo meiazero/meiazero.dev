@@ -17,7 +17,7 @@ const font = Font({
 
 export const metadata: Metadata = {
   title: {
-    default: "meiazero.dev",
+    default: "meiazero",
     template: "%s | meiazero.dev",
   },
   description: "The meiazero website",
@@ -26,7 +26,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
-      <body className={cn("antialiased", font.variable)}>
+      <body
+        className={cn(
+          "antialiased bg-background scroll-smooth min-h-full max-w-3xl mx-auto",
+          font.variable,
+        )}
+      >
         <ProviderStack>{children}</ProviderStack>
       </body>
     </html>
