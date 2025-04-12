@@ -8,10 +8,19 @@ export function PresentationSection() {
     <SectionRoot className='space-y-4'>
       <SectionContent className='flex flex-row justify-between'>
         <div className='space-y-2'>
-          <h1 className='text-3xl font-semibold'>Emanuel Avila</h1>
-          <h2 className='text-muted-foreground text-lg underline'>
-            Software Developer
-          </h2>
+          <div className='flex flex-row items-center space-x-2'>
+            <h1 className='text-3xl font-semibold'>Emanuel Ávila</h1>
+            <h2 className='text-xl'>
+              <a
+                href='https://github.com/meiazero'
+                target='_blank'
+                rel='noreferrer'
+              >
+                [meiazero]
+              </a>
+            </h2>
+          </div>
+          <h2 className='text-muted-foreground text-lg'>Software Developer</h2>
         </div>
 
         <div className='flex flex-row items-center gap-4'>
@@ -38,10 +47,17 @@ export function PresentationSection() {
         </div>
       </SectionContent>
 
-      <SectionContent>
-        <p className='max-w-md text-lg'>
-          Passionate about technology, open source, and focused on creating
-          innovative products.
+      <SectionContent className='space-y-2'>
+        <p className='text-lg'>
+          Hey, I&apos;m Emanuel Ávila - a{" "}
+          <span className='underline'>software developer</span> from Brazil who
+          likes to build cool stuff, focusing on Developer Experience (DX) and
+          Open Source Software (OSS).
+        </p>
+        <p className='text-lg'>
+          I&apos;m currently working on my master&apos;s degree in
+          Teleinformatics Engineering at the Federal University of Ceará (UFC),
+          on Postgraduate Program in Teleinformatics Engineering (PPGETI).
         </p>
       </SectionContent>
     </SectionRoot>
