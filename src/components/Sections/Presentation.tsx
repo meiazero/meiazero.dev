@@ -47,14 +47,14 @@ export function PresentationSection() {
         </div>
       </SectionContent>
 
-      <SectionContent className='space-y-2'>
-        <p className='text-lg'>
+      <SectionContent className='space-y-2 text-lg font-normal'>
+        <p>
           Hey, I&apos;m Emanuel Ávila - a{" "}
           <span className='underline'>software developer</span> from Brazil who
           likes to build cool stuff, focusing on Developer Experience (DX) and
           Open Source Software (OSS).
         </p>
-        <p className='text-lg'>
+        <p>
           I&apos;m currently working on my master&apos;s degree in
           Teleinformatics Engineering at the Federal University of Ceará (UFC),
           on Postgraduate Program in Teleinformatics Engineering (PPGETI).

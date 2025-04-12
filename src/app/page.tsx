@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { PresentationSection } from "@/components/Sections/Presentation";
+import { ProjectSection } from "@/components/Sections/Projects";
 
 /**
  * Force the page to be static and only change with a new build.
@@ -33,6 +34,7 @@ export default function HomePage() {
   return (
     <main className='mx-auto flex max-w-5xl flex-col justify-center px-6 pt-10 sm:px-8'>
       <PresentationSection />
+      <ProjectSection />
     </main>
   );
 }
