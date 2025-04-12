@@ -8,7 +8,7 @@ export function PresentationSection() {
     <SectionRoot className='space-y-4'>
       <SectionContent className='flex flex-row justify-between'>
         <div className='space-y-2'>
-          <div className='flex flex-row items-center space-x-2'>
+          <div className='flex flex-col items-start space-x-2 sm:flex-row sm:items-center'>
             <h1 className='text-3xl font-semibold'>Emanuel Ávila</h1>
             <h2 className='text-xl'>
               <a
@@ -20,10 +20,11 @@ export function PresentationSection() {
               </a>
             </h2>
           </div>
+
           <h2 className='text-muted-foreground text-lg'>Software Developer</h2>
         </div>
 
-        <div className='flex flex-row items-center gap-4'>
+        <div className='flex flex-col-reverse items-center gap-4 sm:flex-row'>
           <a
             href='https://x.com/meiaz3ro'
             target='_blank'
@@ -31,7 +32,7 @@ export function PresentationSection() {
             title='X'
             className='hover:text-muted-foreground'
           >
-            <XIcon className='size-6' />
+            <XIcon className='size-5 sm:size-6' />
           </a>
 
           <a
@@ -41,7 +42,7 @@ export function PresentationSection() {
             title='LinkedIn'
             className='hover:text-muted-foreground'
           >
-            <LinkedInIcon className='size-6' />
+            <LinkedInIcon className='size-5 sm:size-6' />
           </a>
           <ThemeToggle />
         </div>
