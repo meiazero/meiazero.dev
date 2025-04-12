@@ -1,42 +1,43 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "strict": true,
     "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
     "isolatedModules": true,
-
     "allowJs": true,
     "checkJs": true,
-
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    "target": "es2022",
+    "target": "ES2022",
     "moduleResolution": "bundler",
     "moduleDetection": "force",
     "resolveJsonModule": true,
     "noEmit": true,
     "incremental": true,
-
     "jsx": "preserve",
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }

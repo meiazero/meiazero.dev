@@ -1,49 +1,38 @@
-import AnimateEnter from "@/components/animate-enter";
-import { LinkedInIcon } from "@/components/svgs/linkedin";
-import { XIcon } from "@/components/svgs/x";
+import type { Metadata } from "next";
 
-export default function Page() {
+import { PresentationSection } from "@/components/Sections/Presentation";
+
+/**
+ * Force the page to be static and only change with a new build.
+ *
+ * read more about the Route Segment Config here:
+ * https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
+ * 'auto' | 'error' | 'force-static' | 'force-dynamic'
+ */
+export const dynamic = "force-static";
+
+/**
+ * Generate the metadata with dynamic information.
+ *
+ * Read more about the Dynamic Metadata here:
+ * https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
+ */
+export function generateMetadata(): Metadata {
+  return {
+    title: "Home",
+  };
+}
+
+// TODO: Add new sections like:
+// - Projects
+// - Tecnical Stack
+// - Experience
+// - Degrees
+
+export default function HomePage() {
   return (
-    <main className="container flex flex-col justify-center px-6 sm:px-8 pt-10">
-      <AnimateEnter delay={0.4}>
-        <header className="space-y-4">
-          <div className="flex flex-row justify-between">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-semibold">Emanuel Avila</h1>
-              <h2 className="text-lg text-muted-foreground underline">
-                Software Developer
-              </h2>
-            </div>
-
-            <div className="flex flex-row items-center gap-4">
-              <a
-                href="https://x.com/meiaz3ro"
-                target="_blank"
-                rel="noreferrer"
-                title="X"
-                className="hover:text-muted-foreground"
-              >
-                <XIcon className="size-6" />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/meiazero"
-                target="_blank"
-                rel="noreferrer"
-                title="LinkedIn"
-                className="hover:text-muted-foreground"
-              >
-                <LinkedInIcon className="size-6" />
-              </a>
-            </div>
-          </div>
-
-          <p className="text-lg max-w-md">
-            Passionate about technology, open source, and focused on creating
-            innovative products.
-          </p>
-        </header>
-      </AnimateEnter>
+    <main className='mx-auto flex max-w-5xl flex-col justify-center px-6 pt-10 sm:px-8'>
+      <PresentationSection />
     </main>
   );
 }

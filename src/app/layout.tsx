@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Raleway as Font } from "next/font/google";
+import { Geist as Font } from "next/font/google";
+import Script from "next/script";
 import type { PropsWithChildren } from "react";
 
-import { cn } from "@/lib/cn";
+import { env } from "@/env.mjs";
+import { cn } from "@/lib/utils";
 import { ProviderStack } from "@/provider";
-import "./globals.css";
+import "@/styles/globals.css";
 
 const font = Font({
-  display: "swap",
+  style: "normal",
   subsets: ["latin"],
-  variable: "--font-raleway",
-  weight: ["400", "500", "600", "700"],
   fallback: ["sans-serif"],
+  adjustFontFallback: true,
   preload: true,
 });
 
@@ -25,11 +26,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang='en' dir='ltr' suppressHydrationWarning>
+      {env.NODE_ENV === "development" && (
+        <Script
+          crossOrigin='anonymous'
+          src='//unpkg.com/react-scan/dist/auto.global.js'
+        />
+      )}
       <body
         className={cn(
-          "antialiased bg-background scroll-smooth min-h-full max-w-3xl mx-auto",
-          font.variable,
+          "bg-background container mx-auto min-h-screen scroll-smooth antialiased",
+          font.className
         )}
       >
         <ProviderStack>{children}</ProviderStack>
